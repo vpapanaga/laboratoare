@@ -23,7 +23,6 @@ public class SearchEngine {
 
     public List<Person> searchByFirstName(String firstName) {
         List<Person> result = new ArrayList<Person>();
-        int counter=0;
         for (Person p: searchDump) {
             if (p.getFirstName().equals(firstName)) {
                 result.add(p);
@@ -48,6 +47,17 @@ public class SearchEngine {
         int counter=0;
         for (Person p: searchDump) {
             if (p.getEmail().equals(email)) {
+                result.add(p);
+            }
+        }
+        return result;
+    }
+
+    public List<Person> searchByMale(boolean isMale) {
+        List<Person> result = new ArrayList<Person>();
+        int counter=0;
+        for (Person p: searchDump) {
+            if (p.isMale()==isMale) {
                 result.add(p);
             }
         }

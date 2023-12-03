@@ -17,20 +17,26 @@ public class Main {
         }
 
         // Search by First Name
-        System.out.println("\nSearch by First Name = Bastian");
-        for (Person p: searcher.searchByFirstName("Bastian")) {
+        System.out.println("\nSearch by First Name = Maximilien");
+        for (Person p: searcher.searchByFirstName("Maximilien")) {
             System.out.println(p);
         }
 
         // Search by Last Name
-        System.out.println("\nSearch by Last Name = Pelerin");
-        for (Person p: searcher.searchByLastName("Pelerin")) {
+        System.out.println("\nSearch by Last Name = Pelcheur");
+        for (Person p: searcher.searchByLastName("Pelcheur")) {
             System.out.println(p);
         }
 
         // Search by Email
-        System.out.println("\nSearch by Email = lmcnicklee@1688.com");
-        for (Person p: searcher.searchByEmail("lmcnicklee@1688.com")) {
+        System.out.println("\nSearch by Email = tdibartolomeo13@technorati.com");
+        for (Person p: searcher.searchByEmail("tdibartolomeo13@technorati.com")) {
+            System.out.println(p);
+        }
+
+        // Search by Gender
+        System.out.println("\nSearch by Male");
+        for (Person p: searcher.searchByMale(true)) {
             System.out.println(p);
         }
 

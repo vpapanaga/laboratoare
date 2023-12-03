@@ -6,14 +6,17 @@ public class Person {
     private String lastName;
     private String email;
 
+    private boolean isMale;
+
     public Person() {
     }
 
-    public Person(long id, String firstName, String lastName, String email) {
+    public Person(long id, String firstName, String lastName, String email, boolean isMale) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.isMale = isMale;
     }
 
     public long getId() {
@@ -48,13 +51,22 @@ public class Person {
         this.email = email;
     }
 
+    public boolean isMale() {
+        return isMale;
+    }
+
+    public void setMale(boolean male) {
+        isMale = male;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
-                "id= " + id +
-                ", firstName= '" + firstName + '\'' +
-                ", lastName= '" + lastName + '\'' +
-                ", email= '" + email + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", isMale=" + isMale +
                 '}';
     }
 }
