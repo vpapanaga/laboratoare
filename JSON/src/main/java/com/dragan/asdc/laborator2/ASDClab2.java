@@ -1,4 +1,7 @@
-package com.dragan.asdc.laborator1;
+package com.dragan.asdc.laborator2;
+
+import com.dragan.asdc.util.MyFileReader;
+import com.dragan.asdc.util.Person;
 
 import java.util.Arrays;
 import java.util.List;

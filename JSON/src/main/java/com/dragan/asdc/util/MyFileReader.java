@@ -1,4 +1,4 @@
-package com.dragan.asdc.laborator1;
+package com.dragan.asdc.util;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

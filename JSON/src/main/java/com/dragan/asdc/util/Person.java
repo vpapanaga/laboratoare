@@ -1,4 +1,4 @@
-package com.dragan.asdc.laborator1;
+package com.dragan.asdc.util;
 
 public class Person {
     private long id;

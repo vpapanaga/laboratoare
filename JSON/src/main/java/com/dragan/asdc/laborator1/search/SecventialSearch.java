@@ -1,12 +1,14 @@
-package com.dragan.asdc.laborator1;
+package com.dragan.asdc.laborator1.search;
+
+import com.dragan.asdc.util.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchEngine {
+public class SecventialSearch {
     private List<Person> searchDump;
 
-    public SearchEngine(List<Person> searchDump) {
+    public SecventialSearch(List<Person> searchDump) {
         this.searchDump = searchDump;
     }
 
@@ -80,4 +82,5 @@ public class SearchEngine {
         }
         return result;
     }
+
 }
