@@ -1,0 +1,17 @@
+/.idea/.gitignore
+/.idea/aws.xml
+/.idea/compiler.xml
+/JSON/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/JSON/target/classes/data.json
+/JSON/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/JSON/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/.idea/jarRepositories.xml
+/.idea/laboratoare.iml
+/JSON/target/classes/com/dragan/asdc/laborator1/Main.class
+/.idea/misc.xml
+/.idea/modules.xml
+/JSON/target/classes/com/dragan/asdc/laborator1/MyFileReader.class
+/JSON/target/classes/com/dragan/asdc/laborator1/Person.class
+/JSON/target/classes/com/dragan/asdc/laborator1/SearchEngine.class
+/.idea/uiDesigner.xml
+/.idea/vcs.xml
