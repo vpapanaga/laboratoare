@@ -28,7 +28,7 @@ public class MyFileReader {
             Iterator<JSONObject> iterator = jsonArray.iterator();
             while (iterator.hasNext()) {
                 JSONObject line = iterator.next();
-                Person person = new Person( (long) line.get("id"), (String) line.get("first_name"), (String)line.get("lest_name"),(String) line.get("email"));
+                Person person = new Person( (long) line.get("id"), (String) line.get("first_name"), (String)line.get("last_name"),(String) line.get("email"));
                 persons.add(person);
             }
         } catch (Exception e) {
