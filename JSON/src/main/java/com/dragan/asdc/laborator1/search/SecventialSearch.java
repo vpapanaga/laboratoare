@@ -5,17 +5,16 @@ import com.dragan.asdc.util.Person;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SecventialSearch {
-    private List<Person> searchDump;
+public class SecventialSearch extends AbstractSearch{
 
     public SecventialSearch(List<Person> searchDump) {
-        this.searchDump = searchDump;
+        super(searchDump);
     }
 
     public List<Person> searchById(int id) {
         List<Person> result = new ArrayList<Person>();
         int counter=0;
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.getId()==id) {
                 result.add(p);
             }
@@ -25,7 +24,7 @@ public class SecventialSearch {
 
     public List<Person> searchByFirstName(String firstName) {
         List<Person> result = new ArrayList<Person>();
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.getFirstName().equals(firstName)) {
                 result.add(p);
             }
@@ -36,7 +35,7 @@ public class SecventialSearch {
     public List<Person> searchByLastName(String lastName) {
         List<Person> result = new ArrayList<Person>();
         int counter=0;
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.getLastName().equals(lastName)) {
                 result.add(p);
             }
@@ -47,7 +46,7 @@ public class SecventialSearch {
     public List<Person> searchByEmail(String email) {
         List<Person> result = new ArrayList<Person>();
         int counter=0;
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.getEmail().equals(email)) {
                 result.add(p);
             }
@@ -58,7 +57,7 @@ public class SecventialSearch {
     public List<Person> searchByMale(boolean isMale) {
         List<Person> result = new ArrayList<Person>();
         int counter=0;
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.isMale()==isMale) {
                 result.add(p);
             }
@@ -69,7 +68,7 @@ public class SecventialSearch {
     public List<Person> search(int id, String firstName, String lastName, String email) {
         List<Person> result = new ArrayList<Person>();
         int counter=0;
-        for (Person p: searchDump) {
+        for (Person p: getSearchDump()) {
             if (p.getId()==id) {
                 if (p.getFirstName().equals(firstName)) {
                     if (p.getLastName().equals(lastName)) {
@@ -83,4 +82,8 @@ public class SecventialSearch {
         return result;
     }
 
+    @Override
+    public List<Person> search(int id) {
+       return this.searchById(id);
+    }
 }

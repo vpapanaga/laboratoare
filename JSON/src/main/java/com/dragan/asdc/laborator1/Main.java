@@ -1,5 +1,6 @@
 package com.dragan.asdc.laborator1;
 
+import com.dragan.asdc.laborator1.search.BinarySearch;
 import com.dragan.asdc.laborator1.search.SecventialSearch;
 import com.dragan.asdc.util.MyFileReader;
 import com.dragan.asdc.util.Person;
@@ -12,9 +13,21 @@ public class Main {
 
         MyFileReader myFileReader = new MyFileReader("data.json");
         List<Person> persons = myFileReader.read();
-        SecventialSearch sse = new SecventialSearch(persons);
-        SecventialSearchExample(sse);
+        // Exemplu de Secvential Search
+        SecventialSearch secventialSearch = new SecventialSearch(persons);
+        SecventialSearchExample(secventialSearch);
 
+        // Exemplu de Binary Search
+        BinarySearch binarySearch = new BinarySearch(persons);
+        BinarySearchExample(binarySearch);
+    }
+
+    private static void BinarySearchExample(BinarySearch sse) {
+        // Search by ID
+        System.out.println("Search by ID = 29");
+        for (Person p: sse.search(29)) {
+            System.out.println(p);
+        }
     }
 
     private static void SecventialSearchExample(SecventialSearch sse) {
